@@ -80,27 +80,26 @@ export default function OrdonnanceForm({ onSubmit }) {
       <div>
         <label className="block">Médicaments:</label>
         {formData.medications.map((medication, index) => (
-          <div key={index} className="flex space-x-2">
-            <input
-              type="text"
-              name="name"
-              placeholder="Nom du médicament"
-              value={medication.name}
-              onChange={(e) => handleMedicationChange(index, e)}
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-            />
-            <input
-              type="text"
-              name="frequency"
-              placeholder="Fréquence"
-              value={medication.frequency}
-              onChange={(e) => handleMedicationChange(index, e)}
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-            />
-          </div>
-        ))}
+  <div key={index} className="flex space-x-2">
+    <input
+      type="text"
+      name="name"
+      placeholder="Nom du médicament"
+      value={medication.name}
+      onChange={(e) => handleMedicationChange(index, e)}
+      required
+      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+    />
+    <input
+      type="text"
+      name="frequency"
+      placeholder="Fréquence"
+      value={medication.frequency}
+      onChange={(e) => handleMedicationChange(index, e)}
+      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+    />
+  </div>
+))}
         <button type="button" onClick={addMedication} className="mt-2 bg-gray-300 hover:bg-gray-400 text-black font-bold py-1 px-2 rounded">
           Ajouter un médicament
         </button>

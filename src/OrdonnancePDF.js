@@ -1,4 +1,4 @@
-import { Document, Page, Text, StyleSheet } from '@react-pdf/renderer';
+import { Document, Page, Text, StyleSheet, Image } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
   page: {
@@ -27,6 +27,11 @@ const styles = StyleSheet.create({
   bold: {
     fontWeight: 'bold',
   },
+  signature: {
+    marginTop: 20,
+    width: 200, // Ajustez la largeur selon vos besoins
+    height: 100, // Ajustez la hauteur selon vos besoins
+  },
 });
 
 export default function OrdonnancePDF({ data }) {
@@ -54,6 +59,12 @@ export default function OrdonnancePDF({ data }) {
         
         <Text style={styles.text}>&nbsp;</Text> {/* Espacement pour la signature */}
         <Text style={styles.bold}>Rémi PRADERE</Text>
+        
+        {/* Ajout de l'image de signature */}
+        <Image
+          style={styles.signature}
+          src="/signature.png" // Remplacez par l'URL de votre image de signature
+        />
       </Page>
     </Document>
   );
