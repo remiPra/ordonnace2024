@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import OrdonnancePage from './OdonnancePage';
+import FactureSoindePedicuriepage from './FactureSoinDePedicuriePage'
 
 // Composants pour vos pages
 const Home = () => <h2>Page d'accueil</h2>;
@@ -13,7 +14,7 @@ function App() {
       <div className="min-h-screen bg-gray-100">
         <nav className="bg-white shadow-md">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex justify-between h-16">
+            <div className="flex justify-around h-16">
               <div className="flex">
                 <div className="flex-shrink-0 flex items-center">
                   <span className="text-xl font-bold text-gray-800">Logo</span>
@@ -25,7 +26,7 @@ function App() {
                   <Link to="/ordonnance" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                     Ordonnance
                   </Link>
-                  <Link to="/about" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                  <Link to="/facture" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                     À propos
                   </Link>
                   <Link to="/contact" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
@@ -41,7 +42,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/ordonnance" element={<OrdonnancePage />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/facture" element={<FactureSoindePedicuriepage />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
