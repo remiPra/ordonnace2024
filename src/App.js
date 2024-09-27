@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import OrdonnancePage from './OdonnancePage';
 import FactureSoindePedicuriepage from './FactureSoinDePedicuriePage'
-
+import DevisPage from './DevisPage'
 // Composants pour vos pages
 const Home = () => <h2>Page d'accueil</h2>;
 const About = () => <h2>À propos</h2>;
@@ -29,8 +29,8 @@ function App() {
                   <Link to="/facture" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                     À propos
                   </Link>
-                  <Link to="/contact" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                    Contact
+                  <Link to="/devis" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                    Devis
                   </Link>
                 </div>
               </div>
@@ -43,7 +43,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/ordonnance" element={<OrdonnancePage />} />
             <Route path="/facture" element={<FactureSoindePedicuriepage />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/devis" element={<DevisPage />} />
           </Routes>
         </div>
       </div>

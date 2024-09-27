@@ -38,7 +38,7 @@ export default function OrdonnancePDF({ data }) {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        <Text style={styles.title}>FACTURE ACQUITTEE</Text>
+        <Text style={styles.title}>DEVIS SEMELLES ORTHOPEDIQUES</Text>
         <Text style={styles.bold}>PRADERE Remi</Text>
         <Text style={styles.header}>Pédicure Podologue</Text>
         <Text style={styles.header}>4 bis rue Honoré Cazaubon, 32100 CONDOM</Text>
@@ -48,18 +48,18 @@ export default function OrdonnancePDF({ data }) {
         <Text style={styles.text}>Le {data.applicationDuration} à CONDOM</Text>
         <Text style={styles.bold}>{data.patientFirstName} {data.patientName}</Text>
         <Text style={styles.text}>
-        N° Facture :  {data.prescriptionDate}
+        N° DEVIS :  {data.prescriptionDate}
         </Text>
         <Text style={styles.text}>
-        Un soin de pédicurie
-        </Text>
-        
-        <Text style={styles.text}>
-        Tarif : 35 euros 
+        Une paire de semelles orthopédiques 
         </Text>
         
         <Text style={styles.text}>
-        Fait le {data.applicationDuration} à CONDOM 
+        Tarif : 135 euros 
+        </Text>
+        
+        <Text style={styles.text}>
+        Devis réalisé le {data.applicationDuration} à CONDOM 
         </Text>
         
         
